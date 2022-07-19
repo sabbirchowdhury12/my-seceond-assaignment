@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+/* ---------button style------ */
+.btn {
+    padding: 1rem 2rem;
+    border-radius: 4rem;
+    background-color: #E02C6D;
+    color: #fff;
+    display: inline-block;
+    margin-top: 1rem;
+
+}
+
+.btn:hover {
+    letter-spacing: .2rem;
+}
+
+.btn a {
+    color: #fff;
+    font-size: 1.4rem;
+    margin-right: .5rem;
+}
+
+/* -------header section start--------- */
+header {
+    width: 80%;
+    margin: 3rem auto;
+    padding: 3rem 2rem 0 2rem;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #333;
+    border-radius: 3rem;
+}
+
+.header .content {
+    width: 50%;
+}
+
+.content h2 {
+    font-size: 4rem;
+    color: #fff;
+}
+
+.content p {
+    font-size: 1.6rem;
+    color: #eee;
+    margin: 1rem 0;
+}
+
+.image img {
+    display: block;
+}
+
+/* -------header section end--------- */
+
+
+/* --------meadia query-------- */
+
+@media (max-width:992px) {
+    header {
+        width: 90%;
+        padding: 3rem 1rem 0 1rem;
+    }
+}
+
+@media (min-width:575px) and (max-width:776px) {
+    .content h2 {
+        font-size: 2rem;
+    }
+
+    .content p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: .8rem 1.6rem;
+    }
+}
+
+
+@media (max-width:574px) {
+    .header {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .content {
+        text-align: center;
+        width: 100%;
+    }
+
+}
