@@ -201,14 +201,15 @@ section {
 
 .link {
     display: flex;
-    justify-self: center;
-
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 4rem;
 }
 
 .link a {
-    display: inline-block;
+    display: block;
     font-size: 2rem;
-    padding: 2rem 0;
     text-transform: capitalize;
     color: #B9B9B9;
 }
@@ -305,6 +306,12 @@ section {
 
     .cards {
         grid-template-columns: 1fr;
+    }
+
+    /* footer media query------ */
+
+    .link {
+        flex-direction: column;
     }
 
 }
