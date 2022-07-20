@@ -7,7 +7,8 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    transition: all .2s linear;
+    transition: .2s linear;
+    text-transform: capitalize;
 }
 
 html {
@@ -92,7 +93,7 @@ section {
     background: #161616;
     border-radius: 1rem;
     height: 30rem;
-    width: 30rem;
+    width: 25rem;
     flex-shrink: 0;
     gap: 2rem;
 }
@@ -108,7 +109,7 @@ section {
     font-size: 1.6rem;
     color: #161616;
     padding: 2rem 0;
-    border-radius: 2rem;
+    border-radius: 1.5rem;
     text-transform: capitalize;
     font-weight: 600;
 }
@@ -119,6 +120,12 @@ section {
 }
 
 /* ---------card -right-side start------------ */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
 
 .card {
     border: .1rem solid #eee;
@@ -160,7 +167,7 @@ section {
 }
 
 .blogs h3 {
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 .flex {
@@ -177,42 +184,82 @@ section {
 }
 
 
-.cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+
+/* ------bonuos section---- */
+.btn-2 {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.btn-2 a {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: blue;
+    color: #eee;
+    font-size: 1.6rem;
+    border-radius: .5rem;
+    font-weight: 500;
+}
+
+#btn-hide {
+    display: none;
 }
 
 /* ---------main section end------------ */
 
 /* ------footer section start----- */
 .footer {
-    background: #333;
-    padding: 2rem;
+    background: #13131a;
     text-align: center;
+    padding: 3rem;
+}
+
+.footer .share {
+    padding: 1rem 0;
+}
+
+.footer .share a {
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    color: #fff;
+    border: .1rem solid rgba(255, 255, 255, .3);
+    margin: .3rem;
+    border-radius: 50%;
+}
+
+.footer .share a:hover {
+    background-color: #d3ad7f;
+}
+
+.footer .links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem;
+    gap: 1rem;
+}
+
+.footer .links a {
+    padding: .7rem 2rem;
+    color: #fff;
+    border: .1rem solid rgba(255, 255, 255, .3);
+    font-size: 2rem;
+}
+
+.footer .links a:hover {
+    background: #d3ad7f;
 }
 
 .footer h3 {
-    font-size: 4rem;
-    color: #fff;
+    color: #d3ad7f;
+    font-size: 3rem;
+    border-top: .1rem solid rgba(255, 255, 255, .3);
     padding: 2rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 1.5rem;
 }
 
-.link {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-    padding: 4rem;
-}
-
-.link a {
-    display: block;
-    font-size: 2rem;
-    text-transform: capitalize;
-    color: #B9B9B9;
-}
 
 /* ------footer section end----- */
 
@@ -277,7 +324,12 @@ section {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    #btn-hide {
+        display: block;
+    }
+
 }
+
 
 
 @media (max-width:574px) {
@@ -310,8 +362,21 @@ section {
 
     /* footer media query------ */
 
-    .link {
+    .footer .links {
         flex-direction: column;
+        width: 50%;
+        margin: 0 auto;
     }
 
+    #btn-hide {
+        display: none;
+    }
+
+}
+
+@media (max-width:450px) {
+
+    html {
+        font-size: 50%;
+    }
 }
