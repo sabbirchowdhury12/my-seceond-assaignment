@@ -36,10 +36,10 @@ html {
 }
 
 /* -------header section start--------- */
-header {
+section {
     width: 80%;
     margin: 3rem auto;
-    padding: 3rem 2rem 0 2rem;
+
 }
 
 .header {
@@ -48,6 +48,7 @@ header {
     justify-content: space-between;
     background: #333;
     border-radius: 3rem;
+    padding: 3rem 2rem 0 2rem;
 }
 
 .header .content {
@@ -71,17 +72,175 @@ header {
 
 /* -------header section end--------- */
 
+/* --------main section start-------- */
+
+
+/* ------fixed box--------- */
+
+.container {
+    display: flex;
+    gap: 2rem;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+    padding: 2rem;
+    background: #161616;
+    border-radius: 1rem;
+    height: 30rem;
+    width: 30rem;
+    flex-shrink: 0;
+    gap: 2rem;
+}
+
+.box>div {
+    width: 100%;
+}
+
+.box a {
+    background: #fff;
+    width: 100%;
+    display: inline-block;
+    font-size: 1.6rem;
+    color: #161616;
+    padding: 2rem 0;
+    border-radius: 2rem;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+.blog a {
+    background: red;
+    color: #fff;
+}
+
+/* ---------card -right-side start------------ */
+
+.card {
+    border: .1rem solid #eee;
+    border-radius: 1rem;
+}
+
+.card .image {
+    height: 25rem;
+
+
+}
+
+.card .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.blogs {
+    padding: 2rem;
+}
+
+.blogs button {
+    background: transparent;
+    padding: .8rem 1.5rem;
+    border-radius: .5rem;
+    font-size: 1.6rem;
+    color: #161616;
+    margin: 2rem 0;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+.blogs button:hover {
+    background: red;
+    color: #fff;
+    border-color: #fff;
+}
+
+.blogs h3 {
+    font-size: 2rem;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.flex i {
+    font-size: 1.6rem;
+    color: #333;
+    margin: 2rem 0;
+
+}
+
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+/* ---------main section end------------ */
+
+/* ------footer section start----- */
+.footer {
+    background: #333;
+    padding: 2rem;
+    text-align: center;
+}
+
+.footer h3 {
+    font-size: 4rem;
+    color: #fff;
+    padding: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.link {
+    display: flex;
+    justify-self: center;
+
+}
+
+.link a {
+    display: inline-block;
+    font-size: 2rem;
+    padding: 2rem 0;
+    text-transform: capitalize;
+    color: #B9B9B9;
+}
+
+/* ------footer section end----- */
+
+
+
+
+
+
+
+
 
 /* --------meadia query-------- */
 
 @media (max-width:992px) {
-    header {
+    section {
         width: 90%;
+    }
+
+    .header {
         padding: 3rem 1rem 0 1rem;
     }
 }
 
-@media (min-width:575px) and (max-width:776px) {
+@media
+
+/*(min-width:575px) and*/
+(max-width:776px) {
+
+    /* -------header section media query------- */
     .content h2 {
         font-size: 2rem;
     }
@@ -93,10 +252,36 @@ header {
     .btn {
         padding: .8rem 1.6rem;
     }
+
+    /* -------main section media query------- */
+    .container {
+        flex-direction: column;
+    }
+
+    .box {
+        flex-direction: row;
+        padding: 0;
+        background: transparent;
+        border-radius: 1rem;
+        height: auto;
+        width: 100%;
+        flex-shrink: 1;
+    }
+
+    .box a {
+        border: 1px solid #eee;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
 }
 
 
 @media (max-width:574px) {
+
+    /* -------header section media query------- */
     .header {
         flex-direction: column;
         gap: 2rem;
@@ -105,6 +290,21 @@ header {
     .content {
         text-align: center;
         width: 100%;
+    }
+
+    /* -------main section media query------- */
+
+    .box {
+        flex-direction: column;
+    }
+
+    .box a {
+        width: auto;
+        padding: 2rem 3rem;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
     }
 
 }
